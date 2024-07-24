@@ -3,11 +3,16 @@ body{
     font-family: "Benne", serif;
     font-weight: 400;
     font-style: normal;
+    margin: 0;
 }
-#topnav{
+header{
+    background-color: darkgreen;
     text-align: center;
     padding: 20px;
     word-spacing: 10px;
+    position: sticky;
+    top: 0px;
+    width: 100%;
 
 }
 .nav{
@@ -46,10 +51,45 @@ a:hover {
     background-color: #ECB159;
 }
 
-#Experience, #About, #Connect{
+#Experience, #About, #Connect, #Skills, #Projects{
     padding: 30px;
 }
 
 .img:hover{
     transform: scale(2);
+    margin-left: 10px;
+}
+main{
+    width: 800px;
+    margin: 10px auto;
+}
+
+.flex-container{
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly; /* Horizontally centers the content inside the flex container */
+    align-items: center;     /* Vertically centers the content inside the flex container */         /* Full height to demonstrate vertical centering */
+}
+
+.work{
+    background-color: #77B0AA;
+    border-radius: 20px;
+    height:70px;
+    width: 250px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 10px;
+}
+
+footer{
+    background-color:#114232;
+}
+
+.connect-container{
+    display: flex;
+}
+.social-media{
+    margin: auto;
 }
