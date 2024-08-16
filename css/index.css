@@ -16,7 +16,6 @@ header{
 
 }
 .nav{
-    font-size: 18px;
     color: #E3FEF7;
     font-size: 20px;
 }
@@ -26,7 +25,8 @@ h1{
 }
 h2{
     color: #77B0AA;
-    padding: 30px;
+    padding: 20px;
+    margin: 0;
 }
 p, ul{
 font-style: italic;
@@ -50,9 +50,15 @@ a{
 a:hover {
     background-color: #ECB159;
 }
-
+ul{
+    margin: 0;
+}
+li{
+    color: whitesmoke;
+    line-height: 1.5;
+}
 #Experience, #About, #Connect, #Skills, #Projects{
-    padding: 30px;
+    padding: 20px;
 }
 
 .img:hover{
@@ -92,4 +98,77 @@ footer{
 }
 .social-media{
     margin: auto;
+}
+
+@media all and (min-width: 768px){
+main{
+    width:768px;
+}
+    .paragraph{
+        font-size: 40px;
+    }
+.nav{
+    font-size: 25px;
+}
+    h1{
+        font-size: 30px;
+    }
+    .flex-container{
+        flex-direction: column;
+   
+    }
+    .work{
+        border-radius: 20px;
+        height:40px;
+        width: 200px;
+        align-items: center;
+        padding: 15px;
+    }
+    #Experience, #About, #Connect, #Skills, #Projects{
+        padding: 10px;
+    }
+    .img:hover{
+        transform: scale(1.5);
+        margin-left: 8px;
+    }
+    .social-media{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media all and (max-width:400px){
+    main{
+        width: 400px;
+        margin: 10px auto;
+    }
+    header{
+        background-color: green;
+        padding: 3px;
+        word-spacing: 5px;
+    }
+    .paragraph{
+        font-size: 20px;
+    }
+    h1{
+        font-size: 20px;
+    }
+    .flex-container{
+        flex-direction: column;
+        gap: 10px;
+   
+    }
+    .work{
+        border-radius: 20px;
+        height:30px;
+        width: 150px;
+        padding: 10px;
+    }
+    .img:hover{
+        transform: scale(1.2);
+        margin-left: 5px;
+    }
+    .social-media{
+        display: flex;
+        flex-direction: column;
+    }
 }
