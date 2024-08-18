@@ -13,7 +13,6 @@ header{
     position: sticky;
     top: 0px;
     width: 100%;
-
 }
 .nav{
     color: #E3FEF7;
@@ -66,7 +65,6 @@ li{
     margin-left: 10px;
 }
 main{
-    width: 800px;
     margin: 10px auto;
 }
 
@@ -100,46 +98,37 @@ footer{
     margin: auto;
 }
 
-@media all and (min-width: 768px){
-main{
-    width:768px;
-}
+/*tablet version*/
+@media all and (min-width: 768px)and (max-width : 1024px){
     .paragraph{
-        font-size: 40px;
+        font-size: 50px;
+        color: lightskyblue;
     }
 .nav{
-    font-size: 25px;
+    font-size: 35px;
 }
     h1{
-        font-size: 30px;
+        font-size: 50px;
+        color: #a3dbd3;
     }
-    .flex-container{
-        flex-direction: column;
-   
-    }
-    .work{
-        border-radius: 20px;
-        height:40px;
-        width: 200px;
-        align-items: center;
-        padding: 15px;
+.work{
+     height:40px;
+     padding: 15px;
     }
     #Experience, #About, #Connect, #Skills, #Projects{
         padding: 10px;
+        text-align: center;
+        font-size: 1.5rem;
     }
     .img:hover{
         transform: scale(1.5);
         margin-left: 8px;
     }
-    .social-media{
-        display: flex;
-        flex-direction: column;
-    }
 }
-@media all and (max-width:400px){
+/*mobile version*/
+@media all and (max-width:750px){
     main{
-        width: 400px;
-        margin: 10px auto;
+        width: 70%;
     }
     header{
         background-color: green;
@@ -151,17 +140,20 @@ main{
     }
     h1{
         font-size: 20px;
+        color:#a3dbd3;
     }
     .flex-container{
         flex-direction: column;
         gap: 10px;
    
     }
+    h2{
+        color: aliceblue;
+        text-align: center;
+    }
     .work{
-        border-radius: 20px;
         height:30px;
         width: 150px;
-        padding: 10px;
     }
     .img:hover{
         transform: scale(1.2);
