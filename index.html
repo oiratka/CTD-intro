@@ -15,22 +15,23 @@
     />
   </head>
   <body>
+    <nav>
+    <a class="nav home" href="#About">Home</a>
+    <a class="nav" href="#Experience">Experience</a>
+    <a class="nav" href="#Skills">Skills</a>
+    <a class="nav" href="#Projects">Projects</a>
+    <a class="nav" href="#Connect">Contact</a>
+  </nav>
     <header>
-      <nav>
-        <a class="nav" href="#About">Home</a>
-        <a class="nav" href="#Experience">Experience</a>
-        <a class="nav" href="#Skills">Skills</a>
-        <a class="nav" href="#Projects">Projects</a>
-        <a class="nav" href="#Connect">Contact</a>
-      </nav>
-    </header>
-    <main>
       <div id="Heading">
         <h1>Marina Mukobenova</h1>
+        <h2 id="web">Web developer</h2>
       </div>
+    </header>
+    <main>
       <section id="About">
         <h2>About</h2>
-        <p class="paragraph">Hi, I'm Marina.</p>
+        <p class="paragraph">Hey, I'm Marina.</p>
         <p class="paragraph">I'm passionate about learning web development</p>
       </section> <!-- / id="About"-->
       <section id="Experience">
@@ -56,6 +57,25 @@
       <section id="Projects">
         <h2>My projects</h2>
       </section> <!-- / id="Projects"-->
+      <section id="form-parent">
+        <h2>Leave a message</h2>
+        <form name="leave_message">
+          <label for="usersName">Username</label>
+          <input type="text" name="usersName" required true>
+          <br>
+          <label for="usersEmail">Email</label>
+          <input type="email" name="usersEmail" required true>
+          <br>
+          <label for="usersMessage">Message</label>
+          <textarea name="usersMessage" required true></textarea>
+          <br>
+          <button type="submit" id="btn_submit">Submit</button>
+        </form>
+      </section>
+      <section id="messages">
+        <h2>Messages</h2>
+        <ul id="message"></ul>
+      </section>
     </main>
     <footer>
       <section id="Connect">
@@ -70,7 +90,6 @@
               height="30px"
             />
             <a href="https://github.com/oiratka" target="blank">
-              check my Github
             </a>
           </div>
           <div class="social-media">
@@ -81,8 +100,7 @@
               width="50px"
               height="30px"
             />
-            <a href="https://www.instagram.com/" target="blank">
-              follow me on Instagram</a
+            <a href="https://www.instagram.com/" target="blank"></a
             >
           </div>
           <div class="social-media">
@@ -97,7 +115,6 @@
               href="https://www.linkedin.com/in/marina-mukobenova-860114323/"
               target="blank"
             >
-              let's connect on LinkedIn
             </a>
           </div>
         </div>
