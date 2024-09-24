@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="description" content="Information about web developer" />
     <meta name="author" content="Marina Mukobenova" />
@@ -9,117 +9,110 @@
     <link rel="stylesheet" href="css/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Benne&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
+    <link href="https://fonts.googleapis.com/css2?family=Benne&display=swap" rel="stylesheet" />
+</head>
+<body>
     <nav>
-    <a class="nav home" href="#About">Home</a>
-    <a class="nav" href="#Experience">Experience</a>
-    <a class="nav" href="#Skills">Skills</a>
-    <a class="nav" href="#Projects">Projects</a>
-    <a class="nav" href="#Connect">Contact</a>
-  </nav>
-    <header>
-      <div id="Heading">
-        <h1>Marina Mukobenova</h1>
-        <h2 id="web">Web developer</h2>
-      </div>
-    </header>
+        <a class="nav home" href="#About">Home</a>
+        <a class="nav" href="#Experience">Experience</a>
+        <a class="nav" href="#Skills">Skills</a>
+        <a class="nav" href="#Projects">Projects</a>
+        <a class="nav" href="#Connect">Contact</a>
+    </nav>
     <main>
-      <section id="About">
-        <h2>About</h2>
-        <p class="paragraph">Hey, I'm Marina.</p>
-        <p class="paragraph">I'm passionate about learning web development</p>
-      </section> <!-- / id="About"-->
-      <section id="Experience">
-        <h2>Experience</h2>
-        <div class="grid-container">
-          <div class="work">
-            Student at<a
-              href="https://codethedream.org/about/?gad_source=1&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGNzfe9EAi_Nbg6_9q8g-60W5fi0mcmO4GCT19upfYkK7IcvEoD7BvBoC4fwQAvD_BwE"
-              target="_blank"
-            >
-              CTD.</a
-            >
-          </div> <!-- / work experience-CTD-->
-          <div class="work">Insurance agent</div>
-          <div class="work">Construction</div>
-          <div class="work">Administrative</div>
-        </div> <!-- / "flex-container"-->
-      </section> <!-- / id="Experience"-->
-      <section id="Skills">
-        <h2>My skills</h2>
-        <ul></ul>
-      </section> <!-- / id="Skills"-->
-      <section id="Projects">
-        <h2>My projects</h2>
-      </section> <!-- / id="Projects"-->
-      <section id="form-parent">
-        <h2>Leave a message</h2>
-        <form name="leave_message">
-          <label for="usersName">Username</label>
-          <input type="text" name="usersName" required true>
-          <br>
-          <label for="usersEmail">Email</label>
-          <input type="email" name="usersEmail" required true>
-          <br>
-          <label for="usersMessage">Message</label>
-          <textarea name="usersMessage" required true></textarea>
-          <br>
-          <button type="submit" id="btn_submit">Submit</button>
-        </form>
-      </section>
-      <section id="messages">
-        <h2>Messages</h2>
-        <ul id="message"></ul>
-      </section>
+        <div class="container">
+            <!-- Left Section -->
+            <div id="left-section">
+                <h1>Marina Mukobenova</h1>
+                <h2 id="web">Web developer</h2>
+            </div>
+            <!-- Right Section -->
+            <div id="right-section">
+                <section id="About">
+                    <h2>Hey, I'm Marina.</h2>
+                    <p class="paragraph">
+                        I'm passionate about learning web development.
+                    </p>
+                </section>
+                <section id="Experience">
+                    <h2>Experience</h2>
+                    <ol>
+                        <li class="work">
+                            <div>
+                                <header>2024 - present</header>
+                                <h3>Student at <a href="https://codethedream.org" target="_blank">CTD</a></h3>
+                            </div>
+                        </li>
+                        <li class="work">
+                            <div>
+                                <header>2021 - present</header>
+                                <h3>Insurance agent</h3>
+                            </div>
+                        </li>
+                        <li class="work">
+                            <div>
+                                <header>2013 - 2018</header>
+                                <h3>Construction</h3>
+                            </div>
+                        </li>
+                        <li class="work">
+                            <div>
+                                <header>2010 - 2013</header>
+                                <h3>Administrative</h3>
+                            </div>
+                        </li>
+                    </ol>
+                </section>
+                <section id="Skills">
+                    <h2>My skills</h2>
+                    <ul></ul>
+                </section>
+                <section id="Projects">
+                    <h2>My projects</h2>
+                    <ul id="listOfProjects"></ul>
+                </section>
+                <section id="form-parent">
+                    <h2>Leave a message</h2>
+                    <form name="leave_message">
+                        <label for="usersName">Username</label>
+                        <input type="text" name="usersName" required>
+                        <br>
+                        <label for="usersEmail">Email</label>
+                        <input type="email" name="usersEmail" required>
+                        <br>
+                        <label for="usersMessage">Message</label>
+                        <textarea name="usersMessage" required></textarea>
+                        <br>
+                        <button type="submit" id="btn_submit">Submit</button>
+                    </form>
+                </section>
+                <section id="messages">
+                    <h2>Messages</h2>
+                    <ul id="message"></ul>
+                </section>
+            </div> <!-- End of right-section -->
+        </div> <!-- End of container -->
     </main>
     <footer>
-      <section id="Connect">
-        <h2>Contact</h2>
-        <div class="connect-container">
-          <div class="social-media">
-            <img
-              class="img"
-              src="https://images.unsplash.com/photo-1654277041218-84424c78f0ae?q=80&w=2062&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="github-icon"
-              width="50px"
-              height="30px"
-            />
-            <a href="https://github.com/oiratka" target="blank">
-            </a>
-          </div>
-          <div class="social-media">
-            <img
-              class="img"
-              src="https://images.unsplash.com/photo-1505156868547-9b49f4df4e04?q=80&w=2032&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="instagram-icon"
-              width="50px"
-              height="30px"
-            />
-            <a href="https://www.instagram.com/" target="blank"></a
-            >
-          </div>
-          <div class="social-media">
-            <img
-              class="img"
-              src="https://images.unsplash.com/photo-1611944212129-29977ae1398c?q=80&w=2148&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="linkedin-icon"
-              width="50px"
-              height="30px"
-            />
-            <a
-              href="https://www.linkedin.com/in/marina-mukobenova-860114323/"
-              target="blank"
-            >
-            </a>
-          </div>
-        </div>
-      </section>
+        <section id="Connect">
+            <h2>Contact</h2>
+            <div class="connect-container">
+                <div class="social-media">
+                    <img class="img" src="img/github.png" alt="GitHub" width="50px" height="30px" />
+                    <a href="https://github.com/oiratka" target="blank">GitHub</a>
+                </div>
+                <div class="social-media">
+                    <img class="img" src="img/icons8-instagram.png" alt="Instagram" width="50px" height="30px" />
+                    <a href="https://www.instagram.com/" target="blank">Instagram</a>
+                </div>
+                <div class="social-media">
+                    <img class="img" src="img/circle-linkedin-512.webp" alt="LinkedIn" width="50px" height="30px" />
+                    <a href="https://www.linkedin.com/in/marina-mukobenova-860114323/" target="blank">LinkedIn</a>
+                </div>
+            </div>
+        </section>
     </footer>
+
     <script src="js/index.js"></script>
-  </body>
+</body>
 </html>

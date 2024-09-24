@@ -84,3 +84,21 @@ messageForm.addEventListener("submit", function (e) {
   messageSection.style.display = "block";
   messageForm.reset();
 });
+
+fetch('https://api.github.com/users/oiratka/repos')
+  .then(response => response.json())
+  .then(repositories => {
+      console.log(repositories);
+      const projectSection = document.getElementById('Projects');
+const projectList = projectSection.querySelector('#listOfProjects')
+
+for (let i = 0; i < repositories.length; i++){
+    let project = document.createElement('li')
+    project.textContent = repositories[i].name;
+    projectList.appendChild(project);
+  }
+  })
+  .catch(error => console.error('Error:', error));
+
+
+
