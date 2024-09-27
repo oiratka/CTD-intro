@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Information about web developer" />
     <meta name="author" content="Marina Mukobenova" />
@@ -9,110 +9,127 @@
     <link rel="stylesheet" href="css/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Benne&display=swap" rel="stylesheet" />
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Benne&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <nav>
-        <a class="nav home" href="#About">Home</a>
-        <a class="nav" href="#Experience">Experience</a>
-        <a class="nav" href="#Skills">Skills</a>
-        <a class="nav" href="#Projects">Projects</a>
-        <a class="nav" href="#Connect">Contact</a>
+      <a class="nav home" href="#About">Home</a>
+      <a class="nav" href="#Experience">Experience</a>
+      <a class="nav" href="#Skills">Skills</a>
+      <a class="nav" href="#Projects">Projects</a>
+      <a class="nav" href="#Connect">Contact</a>
     </nav>
     <main>
-        <div class="container">
-            <!-- Left Section -->
-            <div id="left-section">
-                <h1>Marina Mukobenova</h1>
-                <h2 id="web">Web developer</h2>
+      <div class="container">
+        <!-- Left Section -->
+        <div id="left-section">
+          <h1>Marina Mukobenova</h1>
+          <h2 id="web">Web developer</h2>
+        </div>
+        <!-- Right Section -->
+        <div id="right-section">
+          <section id="About">
+            <h2>Hey, I'm Marina.</h2>
+            <p class="paragraph">
+              I'm passionate about learning web development.
+            </p>
+          </section>
+          <section id="experience">
+            <div class="experience-block">
+              <h2>Experience</h2>
             </div>
-            <!-- Right Section -->
-            <div id="right-section">
-                <section id="About">
-                    <h2>Hey, I'm Marina.</h2>
-                    <p class="paragraph">
-                        I'm passionate about learning web development.
-                    </p>
-                </section>
-                <section id="Experience">
-                    <h2>Experience</h2>
-                    <ol>
-                        <li class="work">
-                            <div>
-                                <header>2024 - present</header>
-                                <h3>Student at <a href="https://codethedream.org" target="_blank">CTD</a></h3>
-                            </div>
-                        </li>
-                        <li class="work">
-                            <div>
-                                <header>2021 - present</header>
-                                <h3>Insurance agent</h3>
-                            </div>
-                        </li>
-                        <li class="work">
-                            <div>
-                                <header>2013 - 2018</header>
-                                <h3>Construction</h3>
-                            </div>
-                        </li>
-                        <li class="work">
-                            <div>
-                                <header>2010 - 2013</header>
-                                <h3>Administrative</h3>
-                            </div>
-                        </li>
-                    </ol>
-                </section>
-                <section id="Skills">
-                    <h2>My skills</h2>
-                    <ul></ul>
-                </section>
-                <section id="Projects">
-                    <h2>My projects</h2>
-                    <ul id="listOfProjects"></ul>
-                </section>
-                <section id="form-parent">
-                    <h2>Leave a message</h2>
-                    <form name="leave_message">
-                        <label for="usersName">Username</label>
-                        <input type="text" name="usersName" required>
-                        <br>
-                        <label for="usersEmail">Email</label>
-                        <input type="email" name="usersEmail" required>
-                        <br>
-                        <label for="usersMessage">Message</label>
-                        <textarea name="usersMessage" required></textarea>
-                        <br>
-                        <button type="submit" id="btn_submit">Submit</button>
-                    </form>
-                </section>
-                <section id="messages">
-                    <h2>Messages</h2>
-                    <ul id="message"></ul>
-                </section>
-            </div> <!-- End of right-section -->
-        </div> <!-- End of container -->
+            <div class="cards-container">
+              <div class="card">
+                <div class="dates">
+                  <h3>2024 - present</h3>
+                </div>
+                <div class="description">
+                  <h3>Student at <a class="link" href="https://codethedream.org" target="_blank">CTD</a></h3>
+                </div>
+              </div>
+              <div class="card">
+                <div class="dates">
+                  <h3>2021 - present</h3>
+                </div>
+                <div class="description">
+                  <h3>Insurance agent</h3>
+                </div>
+              </div>
+              <div class="card">
+                <div class="dates">
+                  <h3>2013 - 2018</h3>
+                </div>
+                <div class="description">
+                  <h3>Translator at a construction company</h3>
+                </div>
+              </div>
+              <div class="card">
+                <div class="dates">
+                  <h3>2010 - 2013</h3>
+                </div>
+                <div class="description">
+                  <h3>Office manager</h3>
+                </div>
+              </div>
+            </div>
+          </section>  
+          <section id="Skills">
+            <h2>My skills</h2>
+            <ul></ul>
+          </section>
+          <section id="Projects">
+            <h2>My projects</h2>
+            <ul id="listOfProjects"></ul>
+          </section>
+        <!-- FORM -->
+          <section id="form-parent">
+            <h2>Leave a message</h2>
+            <form name="leave_message">
+              <label for="usersName">Username</label>
+              <input type="text" name="usersName" required />
+              <br />
+              <label for="usersEmail">Email</label>
+              <input type="email" name="usersEmail" required />
+              <br />
+              <label for="usersMessage">Message</label>
+              <textarea name="usersMessage" required></textarea>
+              <br />
+              <button type="submit" id="btn_submit">Submit</button>
+            </form>
+          </section>
+          <!-- MESSAGES -->
+          <section id="messages">
+            <h2>Messages</h2>
+            <ul id="message"></ul>
+          </section>
+        </div>
+        <!-- End of right-section -->
+      </div>
+      <!-- End of container -->
     </main>
     <footer>
-        <section id="Connect">
-            <h2>Contact</h2>
-            <div class="connect-container">
-                <div class="social-media">
-                    <img class="img" src="img/github.png" alt="GitHub" width="50px" height="30px" />
-                    <a href="https://github.com/oiratka" target="blank">GitHub</a>
-                </div>
-                <div class="social-media">
-                    <img class="img" src="img/icons8-instagram.png" alt="Instagram" width="50px" height="30px" />
-                    <a href="https://www.instagram.com/" target="blank">Instagram</a>
-                </div>
-                <div class="social-media">
-                    <img class="img" src="img/circle-linkedin-512.webp" alt="LinkedIn" width="50px" height="30px" />
-                    <a href="https://www.linkedin.com/in/marina-mukobenova-860114323/" target="blank">LinkedIn</a>
-                </div>
-            </div>
-        </section>
+      <section id="Connect">
+        <h2>Contact</h2>
+        <div class="connect-container">
+          <div class="social-media">
+            <a href="https://github.com/oiratka" target="blank">GitHub</a>
+          </div>
+          <div class="social-media">
+            <a href="https://www.instagram.com/" target="blank">Instagram</a>
+          </div>
+          <div class="social-media">
+            <a
+              href="https://www.linkedin.com/in/marina-mukobenova-860114323/"
+              target="blank"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+      </section>
     </footer>
-
     <script src="js/index.js"></script>
-</body>
+  </body>
 </html>

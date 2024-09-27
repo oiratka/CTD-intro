@@ -13,6 +13,7 @@ const skillsList = document.querySelector("ul");
 
 for (let i = 0; i < skills.length; i++) {
   const skill = document.createElement("li");
+  skill.classList.add('skills-list');
   skill.innerText = skills[i];
   skillsList.append(skill);
 }
@@ -33,9 +34,10 @@ messageForm.addEventListener("submit", function (e) {
   console.log(firstInput, secondInput, thirdInput);
 
   const newMessage = document.createElement("li");
-  newMessage.innerHTML = `<a href="mailto:${secondInput}">${firstInput}:</a><span>${thirdInput}</span> <br>`;
+  newMessage.innerHTML = `<a href="mailto:${secondInput}" class="nameColor">${firstInput}:</a><span class="nameColor">${thirdInput}</span> <br>`;
 
-  const editNameButton = document.createElement('button');
+
+  /*const editNameButton = document.createElement('button');
   editNameButton.innerText = "edit name";
   editNameButton.classList.add("editNameButton");
 
@@ -45,7 +47,7 @@ messageForm.addEventListener("submit", function (e) {
     if (editedName !== null){
      link.innerText = editedName;
     }
-   })
+   })*/
 
 
   const editMessageButton = document.createElement('button');
@@ -76,7 +78,7 @@ messageForm.addEventListener("submit", function (e) {
       
   });
   
-  newMessage.append(editNameButton);
+  //newMessage.append(editNameButton);
   newMessage.append(editMessageButton);
   newMessage.append(removeButton);
   messageList.append(newMessage);
@@ -93,7 +95,8 @@ fetch('https://api.github.com/users/oiratka/repos')
 const projectList = projectSection.querySelector('#listOfProjects')
 
 for (let i = 0; i < repositories.length; i++){
-    let project = document.createElement('li')
+    let project = document.createElement('li');
+    project.classList.add('projects-list');
     project.textContent = repositories[i].name;
     projectList.appendChild(project);
   }
