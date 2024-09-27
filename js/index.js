@@ -136,4 +136,45 @@ document.getElementById("about-content").addEventListener("click", function () {
    if (newText !== null){
     span.innerText = newText;
    }
-  })*/
+
+  const removeButton = document.createElement("button");
+  removeButton.innerHTML = "remove";
+  removeButton.setAttribute("type", "button");
+  removeButton.classList.add("removeButtonStyle");
+
+  removeButton.addEventListener("click", (e) => {
+    let entry = e.target.parentNode;
+    entry.remove();
+
+    if (messageList.children.length === 0) {
+        messageSection.style.display = "none";
+      }
+      
+  });
+  
+  newMessage.append(editNameButton);
+  newMessage.append(editMessageButton);
+  newMessage.append(removeButton);
+  messageList.append(newMessage);
+
+  messageSection.style.display = "block";
+  messageForm.reset();
+});
+
+fetch('https://api.github.com/users/oiratka/repos')
+  .then(response => response.json())
+  .then(repositories => {
+      console.log(repositories);
+      const projectSection = document.getElementById('Projects');
+const projectList = projectSection.querySelector('#listOfProjects')
+
+for (let i = 0; i < repositories.length; i++){
+    let project = document.createElement('li')
+    project.textContent = repositories[i].name;
+    projectList.appendChild(project);
+  }
+  })
+  .catch(error => console.error('Error:', error));
+
+
+
