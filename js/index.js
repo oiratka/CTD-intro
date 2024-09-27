@@ -7,7 +7,7 @@ const footer = document.querySelector("footer");
 
 const copyright = document.createElement("p");
 copyright.innerText = `\u00A9 Marina Mukobenova, ${thisYear}`;
-copyright.classList.add('copyright')
+copyright.classList.add("copyright");
 footer.append(copyright);
 
 // SKILLS SECTION UL
@@ -17,9 +17,9 @@ const skillsSection = document.querySelector("#Skills");
 const skillsList = document.querySelector("ul");
 
 for (let i = 0; i < skills.length; i++) {
-  const skillsDiv = document.createElement('div');
+  const skillsDiv = document.createElement("div");
   const skill = document.createElement("li");
-  skill.classList.add('skills-list');
+  skill.classList.add("skills-list");
   skill.innerText = skills[i];
   skillsList.append(skill);
 }
@@ -54,11 +54,10 @@ messageForm.addEventListener("submit", function (e) {
     entry.remove();
 
     if (messageList.children.length === 0) {
-        messageSection.style.display = "none";
-      }
-      
+      messageSection.style.display = "none";
+    }
   });
-  
+
   //newMessage.append(editNameButton);
   /*newMessage.append(editMessageButton);*/
   newMessage.append(removeButton);
@@ -70,54 +69,51 @@ messageForm.addEventListener("submit", function (e) {
 
 //FETCH GITHUB REPOSITORIES
 
-fetch('https://api.github.com/users/oiratka/repos')
-  .then(response => response.json())
-  .then(repositories => {
-      console.log(repositories);
-      const projectSection = document.getElementById('Projects');
-      const projectList = projectSection.querySelector('#listOfProjects')
+fetch("https://api.github.com/users/oiratka/repos")
+  .then((response) => response.json())
+  .then((repositories) => {
+    console.log(repositories);
+    const projectSection = document.getElementById("Projects");
+    const projectList = projectSection.querySelector("#listOfProjects");
 
-for (let i = 0; i < repositories.length; i++){
-    let project = document.createElement('li');
-    project.classList.add('projects-list');
-    let projectLink = document.createElement('a');
-    projectLink.classList.add('projectLink')
-    projectLink.textContent = repositories[i].name;
+    for (let i = 0; i < repositories.length; i++) {
+      let project = document.createElement("li");
+      project.classList.add("projects-list");
+      let projectLink = document.createElement("a");
+      projectLink.classList.add("projectLink");
+      projectLink.textContent = repositories[i].name;
 
-    projectLink.href = repositories[i].html_url; 
-    projectLink.target = "_blank";
+      projectLink.href = repositories[i].html_url;
+      projectLink.target = "_blank";
 
-    project.appendChild(projectLink);
-    projectList.appendChild(project);
-  }
+      project.appendChild(projectLink);
+      projectList.appendChild(project);
+    }
   })
-  .catch(error => console.error('Error:', error));
+  .catch((error) => console.error("Error:", error));
 
 //HAMBURGER
-  const hamburger = document.querySelector('.hamburger');
-  const navLinks = document.querySelector('.nav-links');
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
 
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active'); 
-  });
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
 
 // CLICK EVENT FOR ABOUT SECTION
-  document.getElementById("about-content").addEventListener("click", function() {
-    const moreContent = document.getElementById("more-about");
-    // Toggle the hidden class to show or hide content
-    if (moreContent.classList.contains("hidden")) {
-      moreContent.classList.remove("hidden");
-    } else {
-      moreContent.classList.add("hidden");
-    }
-  });
-  
-
-
+document.getElementById("about-content").addEventListener("click", function () {
+  const moreContent = document.getElementById("more-about");
+  // Toggle the hidden class to show or hide content
+  if (moreContent.classList.contains("hidden")) {
+    moreContent.classList.remove("hidden");
+  } else {
+    moreContent.classList.add("hidden");
+  }
+});
 
 //removed extra buttons
 
-  /*const editNameButton = document.createElement('button');
+/*const editNameButton = document.createElement('button');
   editNameButton.innerText = "edit name";
   editNameButton.classList.add("editNameButton");
 
@@ -129,7 +125,7 @@ for (let i = 0; i < repositories.length; i++){
     }
    })*/
 
-  /*const editMessageButton = document.createElement('button');
+/*const editMessageButton = document.createElement('button');
   editMessageButton.innerText = "edit message";
   editMessageButton.classList.add("editMessageButton");
 
