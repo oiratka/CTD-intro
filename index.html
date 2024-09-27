@@ -13,58 +13,61 @@
       href="https://fonts.googleapis.com/css2?family=Benne&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
   <body>
+    <!-- NAVBAR-->
     <nav>
       <div class="home">
-      <a href="#About">Home</a></div>
-      <button class="hamburger" aria-label="Toggle navigation">
-        &#9776;  </button>
-        <div class="nav-links" id="nav-links">
-      <a class="nav" href="#experience">Experience</a>
-      <a class="nav" href="#Skills">Skills</a>
-      <a class="nav" href="#Projects">Projects</a>
-      <a class="nav" href="#Connect">Contact</a>
-    </div>
+        <a href="#About">Home</a>
+      </div>
+      <button class="hamburger" aria-label="Toggle navigation">&#9776;</button>
+      <div class="nav-links" id="nav-links">
+        <a class="nav" href="#experience">Experience</a>
+        <a class="nav" href="#Skills">Skills</a>
+        <a class="nav" href="#Projects">Projects</a>
+        <a class="nav" href="#Connect">Contact</a>
+      </div>
     </nav>
     <main>
       <div class="container">
         <!-- Left Section -->
         <div id="left-section">
           <h1>Marina Mukobenova</h1>
-          <h2 id="web">Web developer</h2>
+          <h2 id="webDev">Web developer</h2>
           <div id="my-img">
-          <img src="img/IMG_8448-modified.png" alt="MM" width="250px"></div>
+            <img src="img/IMG_8448-modified.png" alt="MM" width="250px" />
+          </div>
         </div>
         <!-- Right Section -->
         <div id="right-section">
-          <section id="About">
+          <section id="About" class="card">
             <h2>Hey there!</h2>
-            <p class="paragraph">
-              I’m Marina, an aspiring NYC based web developer passionate about creating simple,
-              engaging and user-friendly websites.
-            </p>
-            <p class="paragraph">
-              My journey into web development began when I enrolled with a free
-              coding camp CTD with inspiring mentors and peers. I enjoy
-              learning and improving my skills through practice and online
-              courses, and dedicate my time to learning various web technologies,
-                including HTML, CSS, JavaScript.
+            <div id="about-content" class="about-content">
+              <p class="paragraph">
+                I’m Marina, an aspiring NYC based web developer passionate about creating simple, engaging, and user-friendly websites.
               </p>
-            <p class="paragraph">
-              In my free time, I enjoy yoga, walking in the park, videography,
-              watching Youtube videos, and reading.
-            </p>
-            <p class="paragraph">
-              I am looking forward to taking the next step in my web development
-              career and am open to opportunities where I can learn and grow.
-            </p>
-            <p class="paragraph">
-              Feel free to check out my projects in the portfolio section and
-              connect with me on social media platforms or LinkedIn.
-            </p>
-            <p class="paragraph">Thank you for visiting my portfolio!</p>
+              <!-- Hidden content -->
+              <div id="more-about" class="hidden">
+                <p class="paragraph">
+                  My journey into web development began when I enrolled with a free coding camp CTD with inspiring mentors and peers.
+                  I enjoy learning and improving my skills through practice and online courses, and dedicate my time to learning various web technologies.
+                </p>
+                <p class="paragraph">
+                  In my free time, I enjoy yoga, walking in the park, videography, watching YouTube videos, and reading.
+                </p>
+                <p class="paragraph">
+                  I am looking forward to taking the next step in my web development career and am open to opportunities where I can learn and grow.
+                </p>
+                <p class="paragraph">
+                  Feel free to check out my projects in the portfolio section and connect with me on social media platforms or LinkedIn.
+                </p>
+              </div>
+            </div>
           </section>
+          <!-- EXPERIENCE-->          
           <section id="experience">
             <div class="experience-block">
               <h2>Experience</h2>
@@ -112,10 +115,12 @@
               </div>
             </div>
           </section>
+          <!-- SKILLS-->
           <section id="Skills">
             <h2>My skills</h2>
             <ul></ul>
           </section>
+          <!-- PROJECTS-->
           <section id="Projects">
             <h2>My projects</h2>
             <ul id="listOfProjects"></ul>
@@ -152,19 +157,19 @@
         <div class="connect-container">
           <div class="social-media">
             <div>
-              <img src="img/icons8-github-30.png" alt="github">
+              <img src="img/icons8-github-30.png" alt="github" />
             </div>
             <a href="https://github.com/oiratka" target="blank">GitHub</a>
           </div>
           <div class="social-media">
             <div>
-              <img src="img/icons8-instagram-24.png" alt="instagram">
+              <img src="img/icons8-instagram-24.png" alt="instagram" />
             </div>
             <a href="https://www.instagram.com/" target="blank">Instagram</a>
           </div>
           <div class="social-media">
             <div>
-              <img src="img/icons8-linkedin-24.png" alt="Linkedin">
+              <img src="img/icons8-linkedin-24.png" alt="Linkedin" />
             </div>
             <a
               href="https://www.linkedin.com/in/marina-mukobenova-860114323/"

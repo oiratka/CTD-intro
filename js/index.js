@@ -7,7 +7,10 @@ const footer = document.querySelector("footer");
 
 const copyright = document.createElement("p");
 copyright.innerText = `\u00A9 Marina Mukobenova, ${thisYear}`;
+copyright.classList.add('copyright')
 footer.append(copyright);
+
+// SKILLS SECTION UL
 
 const skills = ["HTML", "CSS", "JavaScript", "GitHub"];
 const skillsSection = document.querySelector("#Skills");
@@ -40,7 +43,7 @@ messageForm.addEventListener("submit", function (e) {
   const newMessage = document.createElement("li");
   newMessage.innerHTML = `<a href="mailto:${secondInput}" class="nameColor">${firstInput}:</a><span class="nameColor">${thirdInput}</span> <br>`;
 
-  const editMessageButton = document.createElement('button');
+  /*const editMessageButton = document.createElement('button');
   editMessageButton.innerText = "edit message";
   editMessageButton.classList.add("editMessageButton");
 
@@ -51,7 +54,7 @@ messageForm.addEventListener("submit", function (e) {
    if (newText !== null){
     span.innerText = newText;
    }
-  })
+  })*/
 
   const removeButton = document.createElement("button");
   removeButton.innerHTML = "remove";
@@ -69,7 +72,7 @@ messageForm.addEventListener("submit", function (e) {
   });
   
   //newMessage.append(editNameButton);
-  newMessage.append(editMessageButton);
+  /*newMessage.append(editMessageButton);*/
   newMessage.append(removeButton);
   messageList.append(newMessage);
 
@@ -110,7 +113,17 @@ for (let i = 0; i < repositories.length; i++){
   });
 
 
-
+  document.getElementById("about-content").addEventListener("click", function() {
+    const moreContent = document.getElementById("more-about");
+  
+    // Toggle the hidden class to show or hide content
+    if (moreContent.classList.contains("hidden")) {
+      moreContent.classList.remove("hidden");
+    } else {
+      moreContent.classList.add("hidden");
+    }
+  });
+  
 
 
 
