@@ -9,7 +9,6 @@ body {
   min-height: 100vh; 
   margin: 0;
 }
-
 /* NAVBAR */
 nav {
   background-color: rgb(81, 110, 81);
@@ -67,18 +66,9 @@ a:hover {
   text-align: center; 
 }
 
-/* LEFT-SECTION */
-#left-section {
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  position: fixed;
-  width: 35%;
-  height: 100vh;
-  padding: 20px;
-  box-sizing: border-box;
-  font-size: 0.8em;
-  background-image: linear-gradient(to right, #3c5a38 0%, #cb8d42 100%);
+/*MOBILE LAYOUT*/
+#right-section{
+  margin: 10px 10px;
 }
 h1 {
   color: #003c43;
@@ -93,41 +83,31 @@ h1 {
   text-shadow: 1px 1px #bd7407;
 }
 #my-img img {
-  max-width: 100%; 
+  max-width: 50%; 
   height: auto; 
   display: block;
   margin: 0 auto;
 }
 
-/* RIGHT-SECTION */
-#right-section {
-  margin-left: 35%;
-  width: 65%;
-  padding: 20px;
-  box-sizing: border-box;
-  overflow-y: auto;
-  height: 100vh;
-  flex-grow: 1; /* Allow it to grow to fill available space */
-  height: auto; /* Remove fixed height */
-}
 h2 {
   color: #77b0aa;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   margin: 0;
   font-size: 1.2em;
 }
+
 #about-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 15px;
+  padding: 10px;
   margin: 0 auto;
   max-width: 100%;
   text-align: center;
 }
 .about-content p {
-  font-size: 1em; 
+  font-size: 0.9em; 
   padding: 5px;
   line-height: 1.5;
 }
@@ -135,6 +115,31 @@ h2 {
   margin: 0;
   font-size: 0.9em;
   text-align: left;
+}
+.animate-char{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #5c7a6e 0%,
+    #197a10 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  color: #86bf8e;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 15px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
 }
 main{
   flex-grow:1;
@@ -161,7 +166,7 @@ main{
   margin: 20px 0;
 }
 .experience-block {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   padding: 5px;
   background-color: #f0f0f0;
   border-radius: 5px;
@@ -177,10 +182,10 @@ h3{
 .card {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding: 8px;
   background-color: #fff;
   border: 1px solid #ccc;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 .dates {
   text-align: left;
@@ -198,6 +203,7 @@ ul {
   text-indent: 15px;
   font-size: 1em;
   padding: 10px;
+  margin-top: 5px;
 }
 ul, #listOfProjects {
   display: flex;
@@ -237,6 +243,7 @@ textarea {
 }
 label {
   text-align: start;
+  font-size: 1em;
 }
 /*BUTTONS*/
 #btn_submit {
@@ -298,18 +305,66 @@ footer {
     font-size: 1.3em;
     word-spacing: 10px;
   }
-  h1, #web {
-    font-size: 2.5em;
+  /* LEFT-SECTION */
+#left-section {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  width: 35%;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 0.8em;
+  background-image: linear-gradient(to right, #3c5a38 0%, #cb8d42 100%);
+}
+  h1, #webDev {
+    font-size: 2em;
   }
   h2 {
     font-size: 2em;
   }
+  #my-img img {
+    max-width: 80%; 
+    height: auto; 
+    display: block;
+    margin: 0 auto;
+  }
+/* RIGHT-SECTION */
+#right-section {
+  margin-left: 35%;
+  width: 65%;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  height: 100vh;
+  flex-grow: 1; /* Allow it to grow to fill available space */
+  height: auto; /* Remove fixed height */
+}
   .about-content p {
     font-size: 1.2em; 
     padding: 5px;
     line-height: 1;
     font-family: "Montserrat", sans-serif;
   }
+  .animate-char{
+   background-size: auto auto;
+   background-clip: border-box;
+   color: #86bf8e;
+   background-clip: text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   animation: textclip 2s linear infinite;
+   display: inline-block;
+       font-size: 35px;
+ }
+ 
+ @keyframes textclip {
+   to {
+     background-position: 200% center;
+   }
+ }
+
   #experience {
     flex-direction: row; 
     justify-content: space-between;
@@ -333,9 +388,14 @@ footer {
 
 @media (min-width: 1024px) {
   h1 {
-    font-size: 5em;
+    font-size: 4.3em;
   }
-  
+  #webDev{
+    font-size:3.5em;
+  }
+  .about-content {
+align-self: center;
+  }
   h2 {
     font-size: 3em;
   }

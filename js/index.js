@@ -13,11 +13,10 @@ footer.append(copyright);
 // SKILLS SECTION UL
 
 const skills = ["HTML", "CSS", "JavaScript", "GitHub"];
-const skillsSection = document.querySelector("#Skills");
+const skillsSection = document.querySelector("#skills");
 const skillsList = document.querySelector("ul");
 
 for (let i = 0; i < skills.length; i++) {
-  const skillsDiv = document.createElement('div');
   const skill = document.createElement("li");
   skill.classList.add('skills-list');
   skill.innerText = skills[i];
