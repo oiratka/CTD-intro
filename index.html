@@ -10,25 +10,152 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Benne&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
+    <!-- NAVBAR-->
     <nav>
-    <a class="nav home" href="#About">Home</a>
-    <a class="nav" href="#Experience">Experience</a>
-    <a class="nav" href="#Skills">Skills</a>
-    <a class="nav" href="#Projects">Projects</a>
-    <a class="nav" href="#Connect">Contact</a>
-  </nav>
-    <header>
-      <div id="Heading">
-        <h1>Marina Mukobenova</h1>
-        <h2 id="web">Web developer</h2>
+      <div class="home">
+        <a href="#About">Home</a>
       </div>
-    </header>
+      <button class="hamburger" aria-label="Toggle navigation">&#9776;</button>
+      <div class="nav-links" id="nav-links">
+        <a class="nav" href="#experience">Experience</a>
+        <a class="nav" href="#Skills">Skills</a>
+        <a class="nav" href="#Projects">Projects</a>
+        <a class="nav" href="#Connect">Contact</a>
+      </div>
+    </nav>
     <main>
+      <div class="container">
+        <!-- Left Section -->
+        <div id="left-section">
+          <h1>Marina Mukobenova</h1>
+          <h2 id="webDev">Web developer</h2>
+          <div id="my-img">
+            <img src="img/IMG_8448-modified.png" alt="MM" width="250px" />
+          </div>
+        </div>
+        <!-- Right Section -->
+        <div id="right-section">
+          <section id="About" class="card">
+            <h2>Hey there!</h2>
+            <div id="about-content" class="about-content">
+              <p class="paragraph">
+                I’m Marina, an aspiring NYC based web developer passionate about
+                creating simple, engaging, and user-friendly websites.
+              </p>
+              <!-- Hidden content -->
+              <div id="more-about" class="hidden">
+                <p class="paragraph">
+                  My journey into web development began when I enrolled with a
+                  free coding camp CTD with inspiring mentors and peers. I enjoy
+                  learning and improving my skills through practice and online
+                  courses, and dedicate my time to learning various web
+                  technologies.
+                </p>
+                <p class="paragraph">
+                  In my free time, I enjoy yoga, walking in the park,
+                  videography, watching YouTube videos, and reading.
+                </p>
+                <p class="paragraph">
+                  I am looking forward to taking the next step in my web
+                  development career and am open to opportunities where I can
+                  learn and grow.
+                </p>
+                <p class="paragraph">
+                  Feel free to check out my projects in the portfolio section
+                  and connect with me on social media platforms or LinkedIn.
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- EXPERIENCE-->
+          <section id="experience">
+            <div class="experience-block">
+              <h2>Experience</h2>
+            </div>
+            <div class="cards-container">
+              <div class="card">
+                <div class="dates">
+                  <h3>2024 - present</h3>
+                </div>
+                <div class="description">
+                  <h3>
+                    Student at
+                    <a
+                      class="link"
+                      href="https://codethedream.org"
+                      target="_blank"
+                      >CTD</a
+                    >
+                  </h3>
+                </div>
+              </div>
+              <div class="card">
+                <div class="dates">
+                  <h3>2021 - present</h3>
+                </div>
+                <div class="description">
+                  <h3>Insurance agent</h3>
+                </div>
+              </div>
+              <div class="card">
+                <div class="dates">
+                  <h3>2013 - 2018</h3>
+                </div>
+                <div class="description">
+                  <h3>Translator at a construction company</h3>
+                </div>
+              </div>
+              <div class="card">
+                <div class="dates">
+                  <h3>2010 - 2013</h3>
+                </div>
+                <div class="description">
+                  <h3>Office manager</h3>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- SKILLS-->
+          <section id="Skills">
+            <h2>My skills</h2>
+            <ul></ul>
+          </section>
+          <!-- PROJECTS-->
+          <section id="Projects">
+            <h2>My projects</h2>
+            <ul id="listOfProjects"></ul>
+          </section>
+          <!-- FORM -->
+          <section id="form-parent">
+            <h2>Leave a message</h2>
+            <form name="leave_message">
+              <label for="usersName">Username</label>
+              <input type="text" name="usersName" required />
+              <br />
+              <label for="usersEmail">Email</label>
+              <input type="email" name="usersEmail" required />
+              <br />
+              <label for="usersMessage">Message</label>
+              <textarea name="usersMessage" required></textarea>
+              <br />
+              <button type="submit" id="btn_submit">Submit</button>
+            </form>
+          </section>
+          <!-- MESSAGES -->
+          <section id="messages">
+            <h2>Messages</h2>
+            <ul id="message"></ul>
+          </section>
+        </div>
+        <!-- End of right-section -->
+      </div>
+      <!-- End of container -->
+=======
       <section id="About">
         <h2>About</h2>
         <p class="paragraph">Hey, I'm Marina.</p>
@@ -83,40 +210,26 @@
         <h2>Contact</h2>
         <div class="connect-container">
           <div class="social-media">
-            <img
-              class="img"
-              src="https://images.unsplash.com/photo-1654277041218-84424c78f0ae?q=80&w=2062&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="github-icon"
-              width="50px"
-              height="30px"
-            />
-            <a href="https://github.com/oiratka" target="blank">
-            </a>
+            <div>
+              <img src="img/icons8-github-30.png" alt="github" />
+            </div>
+            <a href="https://github.com/oiratka" target="blank">GitHub</a>
           </div>
           <div class="social-media">
-            <img
-              class="img"
-              src="https://images.unsplash.com/photo-1505156868547-9b49f4df4e04?q=80&w=2032&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="instagram-icon"
-              width="50px"
-              height="30px"
-            />
-            <a href="https://www.instagram.com/" target="blank"></a
-            >
+            <div>
+              <img src="img/icons8-instagram-24.png" alt="instagram" />
+            </div>
+            <a href="https://www.instagram.com/" target="blank">Instagram</a>
           </div>
           <div class="social-media">
-            <img
-              class="img"
-              src="https://images.unsplash.com/photo-1611944212129-29977ae1398c?q=80&w=2148&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="linkedin-icon"
-              width="50px"
-              height="30px"
-            />
+            <div>
+              <img src="img/icons8-linkedin-24.png" alt="Linkedin" />
+            </div>
             <a
               href="https://www.linkedin.com/in/marina-mukobenova-860114323/"
               target="blank"
+              >LinkedIn</a
             >
-            </a>
           </div>
         </div>
       </section>
