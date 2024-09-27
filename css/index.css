@@ -1,3 +1,4 @@
+/* Mobile-first */
 body {
   background-color: #e2e7d0;
   font-family: "Benne", serif;
@@ -9,8 +10,7 @@ body {
   margin: 0;
 }
 
-/* Mobile-first*/
-
+/* NAVBAR */
 nav {
   background-color: rgb(81, 110, 81);
   color: #e3fef7;
@@ -19,18 +19,17 @@ nav {
   display: flex;
   flex-wrap: wrap;
   position: sticky;
-  top: 0px;
-}
-
-.nav {
   padding: 15px;
-  flex: 1;
   text-decoration: none;
+  justify-content: space-between; /* Use space-between to push elements apart */
+  align-items: center; /* Align items vertically centered */
+  top: 0px;
 }
 
 .home {
   margin-right: auto;
 }
+
 a {
   text-decoration: none;
   color: #e3fef7;
@@ -40,10 +39,52 @@ a {
 a:hover {
   background-color: #ecb159;
 }
-.link{
+
+.link {
   color: darkorange;
 }
+
+.hamburger {
+  display: block; /* Show hamburger on mobile */
+  font-size: 2em;
+  background: none;
+  border: none;
+  color: #e3fef7;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: none; 
+  flex-direction: column; 
+  position: absolute;
+  top: 60px; 
+  left: 0;
+  background-color: rgb(81, 110, 81);
+  width: 100%;
+  z-index: 1000; 
+  padding: 10px 0;
+}
+
+.nav-links.active {
+  display: flex; /* Show links when active */
+}
+
+.nav-links a {
+  padding: 10px;
+  color: #e3fef7; 
+  text-align: center; 
+}
+
+/* Adjust hover for mobile links */
+.nav-links a:hover {
+  background-color: #ecb159; /* Change background on hover */
+}
+
+/* LEFT-SECTION */
 #left-section {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
   position: fixed;
   width: 35%;
   height: 100vh;
@@ -53,6 +94,7 @@ a:hover {
   background-image: linear-gradient(to right, #3c5a38 0%, #cb8d42 100%);
 }
 
+/* RIGHT-SECTION */
 #right-section {
   margin-left: 35%;
   width: 65%;
@@ -60,18 +102,21 @@ a:hover {
   box-sizing: border-box;
   overflow-y: auto;
   height: 100vh;
+  flex-grow: 1; /* Allow it to grow to fill available space */
+  height: auto; /* Remove fixed height */
 }
+
 h1 {
   color: #003c43;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.5em;
   margin-bottom: 0;
 }
 
 #web {
   color: #003c43;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.4em;
   text-shadow: 1px 1px #bd7407;
 }
 
@@ -83,6 +128,13 @@ h2 {
   font-size: 1.2em;
 }
 
+.paragraph {
+  margin: 0;
+  font-size: 0.9em;
+}
+main{
+  flex-grow:1;
+}
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -104,7 +156,9 @@ h2 {
   background-color: #f0f0f0;
   border-radius: 5px;
 }
-
+h3{
+  font-size: 0.9em;
+}
 .cards-container {
   display: flex;
   flex-direction: column;
@@ -134,18 +188,26 @@ ul {
   font-size: 1em;
   padding: 10px;
 }
-ul, #listOfProjects{
+
+ul, #listOfProjects {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.skills-list, .projects-list{
+
+.skills-list, .projects-list {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 5px;
+  font-size: 0.9em;
 }
+
+.projectLink {
+  color: black; 
+}
+
 /* Form Styling */
 #form-parent {
   display: flex;
@@ -156,14 +218,14 @@ ul, #listOfProjects{
 
 form {
   display: grid;
-  width: 100%;
+  width: 60%;
   flex-direction: column;
   align-items: center;
 }
 
 input,
 textarea {
-  padding: 11px;
+  padding: 10px;
 }
 
 label {
@@ -173,52 +235,79 @@ label {
 #btn_submit {
   width: 50%;
   border-radius: 10px;
-  padding: 15px;
+  padding: 8px;
   background-color: #bd7407;
   justify-self: center;
 }
-.removeButtonStyle{
+
+.removeButtonStyle {
   background-color: rgb(190, 26, 26);
   border-radius: 8px;
 }
-.editMessageButton{
+
+.editMessageButton {
   background-color: rgb(234, 238, 186);
   border-radius: 8px;
 }
-.nameColor{
-  color:black;
+
+.nameColor {
+  color: black;
 }
+
+/* FOOTER */
 footer {
   background-color: #114232;
-  margin-left: 80px;
-  margin-bottom: 0px;
+  width: 100%; 
+  position: relative; 
+  margin-left: 0;
+  margin-top: auto; 
+  padding: 20px 0; 
+  text-align: center; 
 }
+
 .connect-container {
   display: flex;
 }
 
+/* Social Media Links */
 .social-media {
   margin: auto;
 }
-/* Larger Screens */
 
+/* Larger Screens */
 @media (min-width: 768px) {
+  .hamburger {
+    display: none; /* Hide hamburger button on larger screens */
+  }
+  
+  .nav-links {
+    display: flex; /* Show nav links in a row on larger screens */
+    flex-direction: row; /* Align links in a row */
+    position: static; /* Make it static for larger screens */
+    width: auto; /* Allow width to fit content */
+    padding: 0; /* Remove padding */
+  }
+
   h1, #web {
     font-size: 2.5em;
   }
-h2{
-  font-size: 2em;
-}
-nav {
-  font-size: 1.3em;
-  word-spacing: 10px;
-}
-.paragraph{
-  font-size: 1.5em;
-  text-align: center;
-}
+  
+  h2 {
+    font-size: 2em;
+  }
+
+  nav {
+    font-size: 1.3em;
+    word-spacing: 10px;
+  }
+
+  .paragraph {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
   #experience {
-    flex-direction: row;
+    flex-direction: row; /* Keep experience in a row */
     justify-content: space-between;
   }
 
@@ -230,6 +319,7 @@ nav {
   .cards-container {
     flex-basis: 65%;
   }
+
   #btn_submit {
     width: 50%;
     padding: 8px;
@@ -243,13 +333,16 @@ nav {
   h1 {
     font-size: 5em;
   }
-h2{
-  font-size: 3em;
-}
-nav {
-  font-size: 1.3em;
-  word-spacing: 10px;
-}
+  
+  h2 {
+    font-size: 3em;
+  }
+
+  nav {
+    font-size: 1.3em;
+    word-spacing: 10px;
+  }
+
   p,
   ul {
     font-style: italic;
@@ -257,5 +350,6 @@ nav {
     font-size: 2em;
     padding: 10px;
   }
-
 }
+
+

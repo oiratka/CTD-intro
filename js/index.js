@@ -1,3 +1,5 @@
+//CURRENT DATE
+
 const today = new Date();
 const thisYear = today.getFullYear();
 
@@ -18,6 +20,8 @@ for (let i = 0; i < skills.length; i++) {
   skillsList.append(skill);
 }
 
+//MESSAGE FORM
+
 const messageForm = document.querySelector('[name="leave_message"]');
 const messageSection = document.querySelector("#messages");
 const messageList = document.querySelector("#message");
@@ -35,20 +39,6 @@ messageForm.addEventListener("submit", function (e) {
 
   const newMessage = document.createElement("li");
   newMessage.innerHTML = `<a href="mailto:${secondInput}" class="nameColor">${firstInput}:</a><span class="nameColor">${thirdInput}</span> <br>`;
-
-
-  /*const editNameButton = document.createElement('button');
-  editNameButton.innerText = "edit name";
-  editNameButton.classList.add("editNameButton");
-
-  editNameButton.addEventListener('click', (e)=>{
-    const link = newMessage.querySelector('a');
-    const editedName = prompt ("edit your name:", link.innerText);
-    if (editedName !== null){
-     link.innerText = editedName;
-    }
-   })*/
-
 
   const editMessageButton = document.createElement('button');
   editMessageButton.innerText = "edit message";
@@ -86,7 +76,7 @@ messageForm.addEventListener("submit", function (e) {
   messageSection.style.display = "block";
   messageForm.reset();
 });
-
+//FETCH GITHUB REPOSITORIES
 fetch('https://api.github.com/users/oiratka/repos')
   .then(response => response.json())
   .then(repositories => {
@@ -97,11 +87,45 @@ const projectList = projectSection.querySelector('#listOfProjects')
 for (let i = 0; i < repositories.length; i++){
     let project = document.createElement('li');
     project.classList.add('projects-list');
-    project.textContent = repositories[i].name;
+    let projectLink = document.createElement('a');
+    projectLink.classList.add('projectLink')
+    projectLink.textContent = repositories[i].name;
+
+    projectLink.href = repositories[i].html_url; 
+    projectLink.target = "_blank";
+
+    project.appendChild(projectLink);
     projectList.appendChild(project);
   }
   })
   .catch(error => console.error('Error:', error));
 
+
+
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active'); 
+  });
+
+
+
+
+
+
+
+
+  /*const editNameButton = document.createElement('button');
+  editNameButton.innerText = "edit name";
+  editNameButton.classList.add("editNameButton");
+
+  editNameButton.addEventListener('click', (e)=>{
+    const link = newMessage.querySelector('a');
+    const editedName = prompt ("edit your name:", link.innerText);
+    if (editedName !== null){
+     link.innerText = editedName;
+    }
+   })*/
 
 
