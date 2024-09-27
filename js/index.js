@@ -17,6 +17,7 @@ const skillsSection = document.querySelector("#Skills");
 const skillsList = document.querySelector("ul");
 
 for (let i = 0; i < skills.length; i++) {
+  const skillsDiv = document.createElement('div');
   const skill = document.createElement("li");
   skill.classList.add('skills-list');
   skill.innerText = skills[i];
@@ -43,19 +44,6 @@ messageForm.addEventListener("submit", function (e) {
   const newMessage = document.createElement("li");
   newMessage.innerHTML = `<a href="mailto:${secondInput}" class="nameColor">${firstInput}:</a><span class="nameColor">${thirdInput}</span> <br>`;
 
-  /*const editMessageButton = document.createElement('button');
-  editMessageButton.innerText = "edit message";
-  editMessageButton.classList.add("editMessageButton");
-
-
-  editMessageButton.addEventListener('click', (e)=>{
-   const span = newMessage.querySelector('span');
-   const newText = prompt ("edit your message:", span.innerText);
-   if (newText !== null){
-    span.innerText = newText;
-   }
-  })*/
-
   const removeButton = document.createElement("button");
   removeButton.innerHTML = "remove";
   removeButton.setAttribute("type", "button");
@@ -79,13 +67,15 @@ messageForm.addEventListener("submit", function (e) {
   messageSection.style.display = "block";
   messageForm.reset();
 });
+
 //FETCH GITHUB REPOSITORIES
+
 fetch('https://api.github.com/users/oiratka/repos')
   .then(response => response.json())
   .then(repositories => {
       console.log(repositories);
       const projectSection = document.getElementById('Projects');
-const projectList = projectSection.querySelector('#listOfProjects')
+      const projectList = projectSection.querySelector('#listOfProjects')
 
 for (let i = 0; i < repositories.length; i++){
     let project = document.createElement('li');
@@ -103,8 +93,7 @@ for (let i = 0; i < repositories.length; i++){
   })
   .catch(error => console.error('Error:', error));
 
-
-
+//HAMBURGER
   const hamburger = document.querySelector('.hamburger');
   const navLinks = document.querySelector('.nav-links');
 
@@ -112,10 +101,9 @@ for (let i = 0; i < repositories.length; i++){
     navLinks.classList.toggle('active'); 
   });
 
-
+// CLICK EVENT FOR ABOUT SECTION
   document.getElementById("about-content").addEventListener("click", function() {
     const moreContent = document.getElementById("more-about");
-  
     // Toggle the hidden class to show or hide content
     if (moreContent.classList.contains("hidden")) {
       moreContent.classList.remove("hidden");
@@ -127,7 +115,7 @@ for (let i = 0; i < repositories.length; i++){
 
 
 
-
+//removed extra buttons
 
   /*const editNameButton = document.createElement('button');
   editNameButton.innerText = "edit name";
@@ -141,4 +129,15 @@ for (let i = 0; i < repositories.length; i++){
     }
    })*/
 
+  /*const editMessageButton = document.createElement('button');
+  editMessageButton.innerText = "edit message";
+  editMessageButton.classList.add("editMessageButton");
 
+
+  editMessageButton.addEventListener('click', (e)=>{
+   const span = newMessage.querySelector('span');
+   const newText = prompt ("edit your message:", span.innerText);
+   if (newText !== null){
+    span.innerText = newText;
+   }
+  })*/
